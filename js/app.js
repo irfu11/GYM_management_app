@@ -2,10 +2,12 @@
  * IRONPEAK GYM MANAGEMENT - CORE APPLICATION LOGIC
  */
 
+import { initialMembers, gymPlans } from './data.js';
+
 const app = {
     state: {
-        members: [...(window.initialMembers || [])],
-        plans: {...(window.gymPlans || {})},
+        members: [...initialMembers],
+        plans: {...gymPlans},
         currentView: 'dashboard'
     },
 

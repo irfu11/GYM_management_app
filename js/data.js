@@ -1,4 +1,4 @@
-const initialMembers = [
+export const initialMembers = [
     { id: 'M001', name: 'Vikram Malhotra', phone: '9820012345', age: 29, email: 'vikram@example.com', plan: 'Premium', start: '2026-05-01', dur: '6', pay: 'paid' },
     { id: 'M002', name: 'Ananya Iyer', phone: '9123456780', age: 24, email: 'ananya@example.com', plan: 'Standard', start: '2026-04-15', dur: '1', pay: 'paid' },
     { id: 'M003', name: 'Rahul Sharma', phone: '9988776655', age: 31, email: 'rahul@example.com', plan: 'Basic', start: '2026-01-10', dur: '3', pay: 'pending' },
@@ -8,7 +8,7 @@ const initialMembers = [
     { id: 'M007', name: 'Arjun Verma', phone: '9332211009', age: 40, email: 'arjun@example.com', plan: 'Premium', start: '2026-02-01', dur: '3', pay: 'paid' }
 ];
 
-const gymPlans = {
+export const gymPlans = {
     Basic: { 
         price: 800, 
         features: ['Gym Access', 'Locker Room'] 
@@ -21,5 +21,3 @@ const gymPlans = {
         price: 2000, 
         features: ['Gym Access', 'Locker Room', 'Personal Trainer (4 sessions/mo)', 'Group Classes', 'Diet Plan', 'Steam Bath']    }
 };
-window.initialMembers = initialMembers;
-window.gymPlans = gymPlans;
