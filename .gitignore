@@ -1,0 +1,36 @@
+node_modules/
+dist/
+.DS_Store
+.env
+.vscode/
+.idea/
+/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/package-lock.json
+/coverage/
+/.parcel-cache/
+/.pnp/
+.pnp.js
+
+# macOS
+*.DS_Store
+
+# Android
+android/app/build/
+
+# iOS
+ios/Pods/
+
+# build outputs
+build/
+
+# Capacitor & Cordova
+www/
+android/build/
+ios/build/
+
+# Misc
+*.local
+*.env.local
