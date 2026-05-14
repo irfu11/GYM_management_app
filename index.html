@@ -12,6 +12,20 @@
     
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./favicon.ico">
+    <script>
+        // Temporary app stub to queue calls made before app.js loads.
+        if (!window.app) {
+            window.__app_queue = [];
+            window.app = new Proxy({}, {
+                get(target, prop) {
+                    return function(...args) {
+                        window.__app_queue.push({ fn: prop, args });
+                    };
+                }
+            });
+        }
+    </script>
 </head>
 <body>
     <div id="ironpeak-app">
@@ -141,7 +155,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="js/data.js"></script>
-    <script src="js/app.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

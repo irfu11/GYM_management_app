@@ -398,4 +398,15 @@ window.app = app;
 // Start App
 console.log('IRONPEAK: Initializing app module...');
 app.init();
+// Flush any queued calls that happened before app.js loaded
+if (window.__app_queue && Array.isArray(window.__app_queue)) {
+    window.__app_queue.forEach(item => {
+        try {
+            if (typeof app[item.fn] === 'function') app[item.fn](...item.args);
+        } catch (e) {
+            console.error('Error flushing queued app call', item.fn, e);
+        }
+    });
+    delete window.__app_queue;
+}
 console.log('IRONPEAK: App initialized.');
